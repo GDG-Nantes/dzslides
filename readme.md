@@ -2,12 +2,12 @@
 
 **DZSlides** is a **one-file** HTML template to build slides in HTML5 and CSS3.
 
-[template.html](/paulrouget/dzslides/blob/master/template.html) is the only file you need. Edit the file, add your content, change the style, and you're done. To see the slides in action, just load
-the file in your browser.
+template.html in the root of this repository is where you put your slides. The template includes the dzslides script and default styles from the core directory. Edit the template, add your content, change the style, and you're done. To see the slides in action, just load the file in your browser.
 
 ## Features
 
-* Slides can include any HTML5 content (text, image, video, iframes, …);
+* Slides can include any HTML5 content (text, image, video, iframes, etc) 
+    * Try embedding an SVG using the img tag (see http://www.codedread.com/blog/archives/2010/09/21/start-chopping-off-heads/)
 * Slides transitions are animated with CSS3 (sliding by default);
 * Resolution independent (slides are scaled according to the size of the browser. The virtual dimension is 800x600);
 * Fullscreen presentation (HTML5 FullScreen API supported) - press `f` to go fullscreen;
@@ -22,6 +22,8 @@ to your slides. Here, you'll find 2 shells:
 
 * `shells/embedder.html` to embed a presentation in a web page
 * `shells/onstage.html` to show your slides with a control panel
+
+The onstage shell gives you a presenter console popularized by Keynote. It's everything you want and more...and hackable.
 
 To use them, just load the file in your browser, and follow the instructions.
 

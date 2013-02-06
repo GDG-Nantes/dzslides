@@ -199,6 +199,33 @@
       this.toggleContent();
     }
   }
+
+  Dz.onclick = function(aEvent) {
+    if (aEvent.target && aEvent.target.nodeName === "DIV" && (aEvent.target.id === "future"|| aEvent.target.id === "present")) {
+      if (aEvent.target.id === "future"){
+        aEvent.preventDefault(); 
+        this.forward();
+      }else if(aEvent.target.id === "present"){
+        aEvent.preventDefault();
+        this.back();
+      }
+    }
+  }
+
+  Dz.onmousewheel = function(aEvent) {
+    if (aEvent.target && aEvent.target.nodeName === "DIV" && (aEvent.target.id === "future"|| aEvent.target.id === "present")) {
+
+      if (aEvent.wheelDeltaY < 0){
+        aEvent.preventDefault();
+        this.forward();
+
+      }else if (aEvent.wheelDeltaY > 0){
+        aEvent.preventDefault();
+        this.back();
+        
+      }
+    }
+  }
   
   Dz.onmessage = function(aEvent) {
     var argv = aEvent.data.split(" "), argc = argv.length;
@@ -313,6 +340,8 @@
   function init() {
     Dz.init();
     window.onkeydown = Dz.onkeydown.bind(Dz);
+    window.onclick = Dz.onclick.bind(Dz);
+    window.onmousewheel = Dz.onmousewheel.bind(Dz);
     window.onhashchange = Dz.loadIframes.bind(Dz);
     window.onmessage = Dz.onmessage.bind(Dz);
   }
