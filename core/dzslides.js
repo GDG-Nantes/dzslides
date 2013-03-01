@@ -101,20 +101,20 @@ Dz.onclick = function(aEvent) {
       || ((aEvent.target.nodeName === "ARTICLE" 
         || aEvent.target.nodeName === "SECTION" 
         || (aEvent.target.nodeName === "DIV" && aEvent.target.classList.contains("sect2") ) )
-          && (window.document.width - 100) < aEvent.target.clientWidth))) {
+          && (document.documentElement.clientWidth - 100) < aEvent.target.clientWidth))) {
       if (
-        ( aEvent.target.nodeName === "HTML" && aEvent.x > (window.document.width / 2) ) 
-        || ( aEvent.target.nodeName === "ARTICLE" && aEvent.x > (window.document.width * (3/4)) )
-          || ( aEvent.target.nodeName === "SECTION" && aEvent.x > (window.document.width * (3/4)) )
-          || ( aEvent.target.nodeName === "DIV" && aEvent.x > (window.document.width * (3/4)) )
+        ( aEvent.target.nodeName === "HTML" && aEvent.clientX > (document.documentElement.clientWidth / 2) ) 
+        || ( aEvent.target.nodeName === "ARTICLE" && aEvent.clientX > (document.documentElement.clientWidth * (3/4)) )
+          || ( aEvent.target.nodeName === "SECTION" && aEvent.clientX > (document.documentElement.clientWidth * (3/4)) )
+          || ( aEvent.target.nodeName === "DIV" && aEvent.clientX > (document.documentElement.clientWidth * (3/4)) )
         ){
         aEvent.preventDefault();
         this.forward();
       }else if (
-        ( aEvent.target.nodeName === "HTML" && aEvent.x < (window.document.width / 2) )
-        || ( aEvent.target.nodeName === "ARTICLE" && aEvent.x < (window.document.width * (1/4)) )
-          || ( aEvent.target.nodeName === "SECTION" && aEvent.x < (window.document.width * (1/4)) )
-          || ( aEvent.target.nodeName === "DIV" && aEvent.x < (window.document.width * (1/4)) )
+        ( aEvent.target.nodeName === "HTML" && aEvent.clientX < (document.documentElement.clientWidth / 2) )
+        || ( aEvent.target.nodeName === "ARTICLE" && aEvent.clientX < (document.documentElement.clientWidth * (1/4)) )
+          || ( aEvent.target.nodeName === "SECTION" && aEvent.clientX < (document.documentElement.clientWidth * (1/4)) )
+          || ( aEvent.target.nodeName === "DIV" && aEvent.clientX < (document.documentElement.clientWidth * (1/4)) )
         ){
         aEvent.preventDefault();
         this.back();
