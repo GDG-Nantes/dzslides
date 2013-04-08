@@ -197,20 +197,30 @@ section.title > div.subtitle > h2{
 
 
 /* Grey Area on title and intro */
-section.title:before, section.intro:before{
+section.title:before, section.intro:before {
   content: "";
   position: absolute;
   z-index: -1;
   top: 100px;
   left: -1px;
-  width: 225px;
-  height:110px;
+  width: 0px;
+  height:0px;
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   background: -webkit-linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
   background: -moz-linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
   background: -o-linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
   background: linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
+  -webkit-transition: all 0.5s ease-out;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition: all 0.5s ease-out 0.5s;
+  -o-transition: all 0.5s ease-out 0.5s;
+  transition: all 0.5s ease-out 0.5s;
+}
+
+section[aria-selected=true].title:before, section[aria-selected=true].intro:before {
+  width: 225px;
+  height:110px;
   -webkit-transition: all 0.5s ease-out;
   -webkit-transition-delay: 0.5s;
   -moz-transition: all 0.5s ease-out 0.5s;
@@ -714,4 +724,44 @@ section.intro span.image > img{
 
 }
 
-
+/*
+*
+* Fin
+*
+*/
+section.fond_fin h2{
+  color: white;
+}
+section.intro.fond_fin:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #4387fd;
+}
+/*
+section.fond_fin:after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 100px;
+  left: -1px;
+  width: 225px;
+  height:110px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background: webkit-linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
+  background: -moz-linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
+  background: -o-linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
+  background: linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
+  -webkit-transition: all 0.5s ease-out;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition: all 0.5s ease-out 0.5s;
+  -o-transition: all 0.5s ease-out 0.5s;
+  transition: all 0.5s ease-out 0.5s;
+}*/
