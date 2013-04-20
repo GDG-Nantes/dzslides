@@ -371,10 +371,12 @@ section:not(.title):not(.intro) > :not(h1):not(h2):not(footer) {
 
 
 
-li > div.literal > pre.literal{
+li > div.literal > pre.literal, pre.literal{
+  padding-left: 20px;
   color: rgba(0, 13, 23, 0.7);
-  /*font-family: "Arial Narrow", "Liberation Sans Narrow", Arial, sans-serif;*/
+  font-family: "Open Sans", Arial, sans-serif;
   font-stretch: condensed; 
+  word-wrap: break-word;
 }
 
 /*
