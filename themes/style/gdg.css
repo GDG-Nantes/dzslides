@@ -376,7 +376,7 @@ li > div.literal > pre.literal, pre.literal{
   color: rgba(0, 13, 23, 0.7);
   font-family: "Open Sans", Arial, sans-serif;
   font-stretch: condensed; 
-  word-wrap: break-word;
+  white-space: normal;
 }
 
 /*
